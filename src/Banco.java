@@ -6,13 +6,24 @@ public class Banco {
     }
 
     public boolean deposito(double valor) {
-        this.saldo += valor;
-        return true;
+        if (valor <= 0){
+            return false;
+        }
+        else{
+            this.saldo += valor;
+            return true;
+        }
+
 
     }
     public boolean saque(double valor){
-        this.saldo -= valor;
-        return true;
+        if(valor <= 0 && valor < saldo){
+            return false;
+        }
+        else{
+            this.saldo -= valor;
+            return true;
+        }
     }
     public double saldo() {
         return this.saldo;
