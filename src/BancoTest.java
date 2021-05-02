@@ -6,6 +6,7 @@ class BancoTest {
     Banco bd= new Banco();
     @Test
     void deposito() {
+        assertEquals(true,bd.deposito(-80));
     }
 
     @Test
