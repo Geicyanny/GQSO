@@ -1,16 +1,18 @@
 public class Banco {
     private double saldo;
 
-    public Banco(double saldo) {
-        this.saldo = saldo;
+    public Banco() {
+        this.saldo = 0;
     }
 
-    public void deposito(double valor) {
+    public boolean deposito(double valor) {
         this.saldo += valor;
+        return true;
 
     }
-    public void saque(double valor){
+    public boolean saque(double valor){
         this.saldo -= valor;
+        return true;
     }
     public double saldo() {
         return this.saldo;
